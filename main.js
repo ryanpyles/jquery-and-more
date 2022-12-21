@@ -1,20 +1,15 @@
-let newDiv = $('<div> Click Here</div>');
-let page  = $('body');
-page.append(newDiv);
+let div = $("<div>Click Here.</div>");
+let body = $("body");
+let para = $("<p>這是我用中文寫一個網站的嘗試。如果願意，請單擊文本以顯示消息。</p>");
 
-let  ul = $('<ul></ul>');
-page.append(ul);
+body.append(div);
+div.append(para);
 
-newDiv.on('click', () => {
-    console.log('test');
-    let input = $('#myInput');
-    let myLi = $(`<li>${input.val()}</li>`)
-    ul.append(myLi);
-
-    input.val(''); //clears text for input
+div.on('click', () => {
+    alert(`Bonjour le monde! 世界，大家好！`)
 })
 
-page.css({
-    backgroundColor: "blue",
-    color: "white"
-})
+body.css({
+    backgroundColor: 'lightblue',
+    color: 'darkblue'
+});
